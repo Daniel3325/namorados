@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  font-family: sans-serif;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.borda-rgb {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  box-sizing: border-box;
+  border: 8px solid transparent;
+  border-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
+  border-image-slice: 1;
+  animation: bordaRGB 5s linear infinite;
+  z-index: 1;
+}
+
+@keyframes bordaRGB {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+.coraçoes-container {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.carta-fechada {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  cursor: pointer;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.carta-fechada:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.carta-aberta {
+  display: none;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1c1c1e;
+  color: #f0f0f0;
+  padding: 20px;
+  border-radius: 15px;
+  width: 90vw;
+  max-width: 360px;
+  box-sizing: border-box;
+  text-align: center;
+  z-index: 3;
+  animation: aparecer 1s ease forwards;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+.titulo {
+  font-family: Great Vibes;
+  font-size: 1.5em;
+  color: #f0f0f0;
+  margin-bottom: 10px;
+  font-weight: 900;
+}
+
+.spotify-player {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.mensagem {
+  font-family: Quicksand;
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  color: #f0f0f0;
+}
+
+.imagens-loop {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 220px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.imagem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  border-radius: 12px;
+}
+
+.imagem.mostrar {
+  opacity: 1;
+  z-index: 1;
+}
+
+.contador-tempo {
+  font-family: Quicksand;
+  font-size: 1em;
+  color: #f0f0f0;
+  font-weight: bold;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cartinha Especial 💌</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="shortcut icon" href="../sources/Coração.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="borda-rgb"></div>
+  <div class="coraçoes-container"></div>
+
+  <div class="carta-fechada" onclick="abrirCarta()">💌</div>
+
+  <div class="carta-aberta" id="carta">
+    <h2 class="titulo">Feliz Dia dos Namorados! ❤️</h2>
+
+    <div class="spotify-player">
+      <iframe style="border-radius:12px"
+      src="https://open.spotify.com/embed/track/035Q417M83JnP3wvSlyFEK?utm_source=generator&theme=0"
+      width="100%" height="152" frameBorder="0" allowfullscreen=""
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy"></iframe>
+    </div>
+
+    <p class="mensagem">
+      Você é muito especial para mim...<br />
+      Espero que essa cartinha te faça sorrir! 💖
+    </p>
+
+    <div class="imagens-loop" id="imagens-loop">
+      <img class="imagem mostrar" src="../sources/img1.jpg" />
+      <img class="imagem" src="../sources/img2.webp" />
+      <img class="imagem" src="../sources/img3.jpg" />
+    </div>
+
+    <div class="contador-tempo" id="contador"></div>
+  </div>
+
+  <!-- <iframe id="player" src="https://www.youtube.com/embed/SUA_MUSICA?autoplay=1&loop=1&playlist=SUA_MUSICA" style="display: none;"></iframe> -->
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
