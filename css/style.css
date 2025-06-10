@@ -74,7 +74,7 @@ body {
 }
 
 .titulo {
-  font-family: Great Vibes;
+  font-family: 'Great Vibes', cursive;
   font-size: 1.5em;
   color: #f0f0f0;
   margin-bottom: 10px;
@@ -87,7 +87,7 @@ body {
 }
 
 .mensagem {
-  font-family: Quicksand;
+  font-family: 'Quicksand', sans-serif;
   font-size: 1.1em;
   margin-bottom: 20px;
   color: #f0f0f0;
