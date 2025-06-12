@@ -1,15 +1,18 @@
 body {
   margin: 0;
-  padding: 0;
+  padding: 12px 0;
   background: black;
   font-family: sans-serif;
   overflow: hidden;
-  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  /*height: 100vh;*/
 }
 
 .borda-rgb {
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   pointer-events: none;
@@ -18,7 +21,7 @@ body {
   border-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
   border-image-slice: 1;
   animation: bordaRGB 5s linear infinite;
-  z-index: 1;
+  z-index: 9999;
 }
 
 @keyframes bordaRGB {
@@ -52,25 +55,32 @@ body {
 
 .carta-aberta {
   display: none;
-  position: absolute;
-  top: 10%;
+  position: fixed;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   background: #1c1c1e;
   color: #f0f0f0;
   padding: 20px;
   border-radius: 15px;
   width: 90vw;
-  max-width: 360px;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
   box-sizing: border-box;
   text-align: center;
   z-index: 3;
   animation: aparecer 1s ease forwards;
+  scrollbar-width: none; /* Firefox */
+}
+
+.carta-aberta::-webkit-scrollbar {
+  display: none; /* Chrome, Safari e Edge */
 }
 
 @keyframes aparecer {
-  from { opacity: 0; transform: translateX(-50%) translateY(-20px); }
-  to { opacity: 1; transform: translateX(-50%) translateY(0); }
+  from { opacity: 0; transform: translate(-50%, -60%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
 }
 
 .titulo {
@@ -91,6 +101,7 @@ body {
   font-size: 1.1em;
   margin-bottom: 20px;
   color: #f0f0f0;
+  text-align: left;
 }
 
 .imagens-loop {

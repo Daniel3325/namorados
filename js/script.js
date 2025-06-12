@@ -76,7 +76,7 @@ function iniciarContador() {
     const dias = diasTotal % 30;
 
     document.getElementById("contador").innerText =
-      `${meses} mês(es), ${dias} dia(s), ${horas} hora(s), ${minutos} minuto(s), ${segundos} segundo(s) juntos 💖`;
+      `💖 ${meses} mês(es), ${dias} dia(s), ${horas} hora(s), ${minutos} minuto(s), ${segundos} segundo(s) juntos 💖`;
   }, 1000);
 }
 
